@@ -97,4 +97,18 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity.status(status).body(respuesta);
     }
+@ExceptionHandler(PeticionInvalidaException.class)
+public ResponseEntity<ErrorResponse> manejarPeticionInvalida(
+        PeticionInvalidaException ex) {
+
+    return responder(
+        HttpStatus.BAD_REQUEST,
+        ex.getMessage(),
+        Map.of()
+    );
+}
+
+
+
+
 }
