@@ -13,11 +13,6 @@ config:
         username: ""
         password: ""
       bypassProxy: ""
-
-request:
-  auth:
-    type: bearer
-    token: "\ttoken-invalido-de-prueba"
 bundled: false
 extensions:
   bruno:
