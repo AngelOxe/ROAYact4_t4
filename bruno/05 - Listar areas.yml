@@ -1,0 +1,16 @@
+info:
+  name: "\t05 - Listar areas"
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: http://localhost:8087/api/areas
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

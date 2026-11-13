@@ -1,0 +1,23 @@
+info:
+  name: "\t06 - Crear materia"
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: http://localhost:8087/api/materias
+  body:
+    type: json
+    data: |-
+      {
+        "nombre": "Programación Web",
+        "areaId": 1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
