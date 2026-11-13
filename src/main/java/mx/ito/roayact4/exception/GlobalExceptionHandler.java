@@ -108,6 +108,16 @@ public ResponseEntity<ErrorResponse> manejarPeticionInvalida(
     );
 }
 
+@ExceptionHandler(CredencialesInvalidasException.class)
+public ResponseEntity<ErrorResponse> manejarCredencialesInvalidas(
+        CredencialesInvalidasException ex) {
+
+    return responder(
+            HttpStatus.UNAUTHORIZED,
+            ex.getMessage(),
+            Map.of()
+    );
+}
 
 
 
